@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <category label="Konto">
+        <setting id="login" type="text" label="Login" default=""/>
+        <setting id="pin" type="text" label="PIN" default="" option="hidden"/>
+    </category>
+
+    <category label="Harmonogram">
+        <setting id="refresh_hours" type="number" label="Co ile godzin odświeżać M3U/EPG" default="6"/>
+        <setting id="epg_days_ahead" type="number" label="Ile dni EPG do przodu" default="2"/>
+    </category>
+
+    <category label="Ogólne">
+        <setting id="tvreg" type="labelenum" label="Wersja TVP3"
+                 values="Białystok|Bydgoszcz|Gdańsk|Gorzów Wielkopolski|Katowice|Kielce|Kraków|Lublin|Łódź|Olsztyn|Opole|Poznań|Rzeszów|Szczecin|Warszawa|Wrocław"
+                 default="Warszawa"/>
+        <setting type="action" label="Wygeneruj teraz (bez czekania na harmonogram)"
+                 action="RunPlugin(plugin://plugin.video.orange_go?mode=refresh_now)" option="close"/>
+        <setting type="lsep" label="Pliki M3U/XMLTV zapisywane są automatycznie w profilu addonu - wskaż je w PVR IPTV Simple Client jako: special://profile/addon_data/plugin.video.orange_go/orange_go.m3u i .../orange_go.xml"/>
+    </category>
+
+    <!-- przechowywane automatycznie, nie edytować ręcznie -->
+    <category label="Dane sesji (auto)">
+        <setting id="logged" type="text" label="logged" default="false"/>
+        <setting id="ci" type="text" label="ci" default=""/>
+        <setting id="ca" type="text" label="ca" default=""/>
+        <setting id="Token" type="text" label="Token" default=""/>
+        <setting id="TokenId" type="text" label="TokenId" default=""/>
+        <setting id="refreshToken" type="text" label="refreshToken" default=""/>
+        <setting id="tokenTime" type="text" label="tokenTime" default=""/>
+        <setting id="householdExtId" type="text" label="householdExtId" default=""/>
+        <setting id="hhTech" type="text" label="hhTech" default=""/>
+        <setting id="prevC" type="text" label="prevC" default=""/>
+    </category>
+</settings>
